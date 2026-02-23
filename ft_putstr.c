@@ -6,7 +6,7 @@
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 09:27:05 by rortiz            #+#    #+#             */
-/*   Updated: 2026/02/23 09:34:09 by rortiz           ###   ########.fr       */
+/*   Updated: 2026/02/23 09:44:18 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@
  */
 void	ft_putstr(char *str)
 {
-	while (*str)
-		write(1, str++, 1);
+	char	*copy_str;
+
+	copy_str = str;
+	while (*copy_str)
+		write(1, copy_str++, 1);
 }
 
 /*int	main(int arg, char **argv)
