@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/23 09:12:18 by rortiz            #+#    #+#             */
-/*   Updated: 2026/02/26 01:33:04 by rortiz           ###   ########.fr       */
+/*   Created: 2026/02/25 23:29:32 by rortiz            #+#    #+#             */
+/*   Updated: 2026/02/25 23:50:37 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
 /**
- * @brief Checks whether the input character is part of the alphabet
- * @param {int}: c input character
- * @return {int}: 1 if the character is in between [A - Z] or [a - z]
+ * @brief Outputs the character c to the standard output
+ * @param {char} c: The character to output
+ * @return {void}
  */
-int	ft_islapha(int c)
+void	ft_putchar(char c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	write(1, &c, 1);
 }
 
 /*int main(int arg, char **argv)
 {
 	if (arg != 2)
-		ft_putstr("Please only input one argument");
-	ft_putstr("The input is: ");
-	ft_putnbr(ft_islapha(*argv[1]));
+		ft_putstr("Only input one argument");
+	while (*argv[1])
+	{
+		ft_putchar(*argv[1]);
+		argv[1]++;	
+	}
+	ft_putstr("\n");
 	return (0);
 }*/
