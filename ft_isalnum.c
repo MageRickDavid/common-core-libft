@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/23 09:12:18 by rortiz            #+#    #+#             */
-/*   Updated: 2026/02/26 07:55:46 by rortiz           ###   ########.fr       */
+/*   Created: 2026/02/26 07:47:22 by rortiz            #+#    #+#             */
+/*   Updated: 2026/02/26 08:12:58 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,26 @@
  * @param {int}: c input character
  * @return {int}: 1 if the character is in between [A - Z] or [a - z]
  */
-int	ft_isalpha(int c)
+int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
 	return (0);
 }
 
-/*int main(int arg, char **argv)
+/*int	main(int arg, char **argv)
 {
 	if (arg != 2)
-		ft_putstr("Please only input one argument");
-	ft_putstr("The input is: ");
-	ft_putnbr(ft_islapha(*argv[1]));
+	{
+		ft_putstr("Input only one argument");
+		return (1);
+	}
+	ft_putstr("The code of your input is: ");
+	while (*argv[1])
+	{
+		ft_putnbr(ft_isalnum(*argv[1]));
+		argv[1]++;
+	}
+	ft_putchar('\n');
 	return (0);
 }*/
