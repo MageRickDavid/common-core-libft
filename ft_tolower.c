@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 07:00:00 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/01 06:21:45 by rortiz           ###   ########.fr       */
+/*   Created: 2026/03/01 06:22:40 by rortiz            #+#    #+#             */
+/*   Updated: 2026/03/01 06:30:01 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Returns the length of a string
- * @param {char*} str: pointer to the string
- * @return {unsigned long} The length of the string
+ * @brief If the character is a uppercase character it returns the lowercase
+ * If it is not uppercase, it simply returns the same character
+ * @param {int} c: The character to test.
+ * @return {int} The upper case character or the same character.
  */
-unsigned long	ft_strlen(const char *str)
+int	ft_tolower(int c)
 {
-	unsigned long	i;
-	const char		*str_copy;
-
-	str_copy = str;
-	i = 0;
-	while (*str_copy++)
-		i++;
-	return (i);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 
 /*int	main(int arg, char **argv)
 {
+	char	message;
 	if (arg != 2)
+	{
 		ft_putstr("Please only input one argument");
-	ft_putstr("The length of your message is: ");
-	ft_putnbr(ft_strlen(argv[1]));
+		ft_putchar('\n');
+		return (0);
+	}
+	message = ft_tolower(*argv[1]);
+	ft_putstr("Output: ");
+	ft_putchar(message);
 	ft_putchar('\n');
 	return (0);
 }*/
