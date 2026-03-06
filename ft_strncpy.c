@@ -6,7 +6,7 @@
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 22:43:13 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/04 23:22:10 by rortiz           ###   ########.fr       */
+/*   Updated: 2026/03/07 00:21:59 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ char	*ft_strncpy(char *dest, const char *src, int n)
 	while (src[i] && i < n)
 	{
 		dest[i] = src[i];
-		i++;	
+		i++;
 	}
 	if (i < n)
 		dest[i] = '\0';
 	return (dest);
 }
 
-int	main(int arg, char **argv)
+/*int	main(int arg, char **argv)
 {
 	char	destination[100];
 	
@@ -48,4 +48,4 @@ int	main(int arg, char **argv)
 	ft_putstr(destination);
 	ft_putchar('\n');
 	return (0);
-}
+}*/

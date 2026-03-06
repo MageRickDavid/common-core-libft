@@ -6,7 +6,7 @@
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 04:49:09 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/04 23:16:07 by rortiz           ###   ########.fr       */
+/*   Updated: 2026/03/07 00:24:50 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
  * with the constant byte c.
  * @param {void*}: s Pointer to the memory space.
  * @param {int}: c The constant to insert.
- * @param {int}: n The number of bytes of memory where to insert the constant c.
+ * @param {unsigend int}: n The number of bytes of memory 
+ * where to insert the constant c.
  * @return {void*}: Pointer to the memory.
  */
-void	*ft_memset(void *s, int c, int n)
+void	*ft_memset(void *s, int c, unsigned int n)
 {
 	unsigned char	*ptr;
-	int				i;
+	unsigned int	i;
 
 	i = 0;
 	ptr = s;
@@ -38,13 +39,22 @@ void	*ft_memset(void *s, int c, int n)
 /*int	main(int arg, char **argv)
 {
 	char	*ptr;
+	int		size;
+	int		second_input;
 	
-	if (arg != 2)
+	if (arg != 3)
 	{
-		ft_putstr("Please only input one argument");
+		ft_putstr("Please only input two arguments");
 		return (0);
 	}
-	ptr = ft_memset(argv[1], '+', 5);
+	size = ft_strlen(argv[1]);
+	second_input = ft_atoi(argv[2]);
+	if (size < second_input)
+	{
+		ft_putstr("Please input a shorter value\n");
+		return (0);
+	}
+	ptr = ft_memset(argv[1], '+', second_input);
 	ft_putstr("Input changed: ");
 	ft_putstr(ptr);
 	ft_putchar('\n');

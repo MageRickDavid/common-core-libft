@@ -1,49 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/04 09:05:32 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/07 00:25:23 by rortiz           ###   ########.fr       */
+/*   Created: 2026/03/06 23:38:30 by rortiz            #+#    #+#             */
+/*   Updated: 2026/03/07 00:19:59 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Copies a string from src to dest
- * @param {char*} dest: Pointer to the destination memory
- * @param {const char*} src: Pointer to the source memory
- * @return {char*} Returns a pointer to the destination memory
- */
-char	*ft_strcpy(char *dest, const char *src)
+void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 {
-	int	i;
+	unsigned char		*ptr_dest;
+	const unsigned char	*ptr_src;
+	unsigned int		i;
 
 	i = 0;
-	while (src[i])
+	ptr_dest = dest;
+	ptr_src = src;
+	while (i < n)
 	{
-		dest[i] = src[i];
+		ptr_dest[i] = ptr_src[i];
 		i++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }
 
 /*int	main(int arg, char **argv)
 {
-	char	destination[100] = "";
+	unsigned char	dest[100];
+	unsigned int	i;
 	
-	if (arg != 2)
+	i = 0;
+	if (arg != 3)
 	{
-		ft_putstr("Please only input one argument");
-		return (0);
+		ft_putstr("Please only input 2 arguments");
+		return (0);	
 	}
-	ft_strcpy(destination, argv[1]);
-	ft_putstr("The input was: ");
-	ft_putstr(destination);
+	ft_memcpy(dest, argv[1], (unsigned) ft_atoi(argv[2]));
+	while (i < (unsigned) ft_atoi(argv[2]))
+	{
+		ft_putchar((char)(dest[i]));
+		i++;
+	}
 	ft_putchar('\n');
 	return (0);
 }*/
