@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/23 09:27:05 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/13 08:47:35 by rortiz           ###   ########.fr       */
+/*   Created: 2026/03/13 10:01:17 by rortiz            #+#    #+#             */
+/*   Updated: 2026/03/13 10:18:26 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-/**
- * @brief Prints a string into the standard output
- * @param {char*}: str input string
- * @return {void}
- */
-void	ft_putstr(char const *str)
+void	ft_strclr(char *s)
 {
-	char const	*copy_str;
-
-	copy_str = str;
-	while (*copy_str)
-		write(1, copy_str++, 1);
+	char	*s_copy;
+	
+	s_copy = s;
+	while (*s_copy)
+	{
+		*s_copy = 0;
+		s_copy++;
+	}
 }
 
 /*int	main(int arg, char **argv)
 {
+	int	len;
+	int	i;
+	
 	if (arg != 2)
-		ft_putstr("Please only input one argument");
-	ft_putstr("Message received: ");
-	ft_putstr(argv[1]);
-	ft_putstr("\n");
+	{
+		ft_putstr("Please only put one argument\n");
+		return (0);
+	}
+	len = ft_strlen(argv[1]);
+	i = 0;
+	while (i < len)
+	{
+		ft_putstr("\\0");
+		i++;
+	}
+	ft_putchar('\n');
 	return (0);
 }*/
