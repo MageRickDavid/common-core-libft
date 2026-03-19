@@ -6,7 +6,7 @@
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 09:24:00 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/13 10:18:49 by rortiz           ###   ########.fr       */
+/*   Updated: 2026/03/19 10:05:49 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void			ft_putnbr(int n);
 void			ft_bzero(void *s, unsigned int n);
 void			ft_putchar(char c);
 void			ft_strclr(char *s);
+void            *ft_memccpy(void *dest, const void *src, int c, unsigned int n);
 int				ft_atoi(const char *str);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

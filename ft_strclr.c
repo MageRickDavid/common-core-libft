@@ -6,12 +6,17 @@
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 10:01:17 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/13 10:18:26 by rortiz           ###   ########.fr       */
+/*   Updated: 2026/03/19 09:02:14 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Sets every character of the string to the value '\0'.
+ * @param {char*} s: Pointer to the string.
+ * @return {void}
+ */
 void	ft_strclr(char *s)
 {
 	char	*s_copy;

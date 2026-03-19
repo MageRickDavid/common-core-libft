@@ -6,12 +6,20 @@
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 23:38:30 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/07 00:19:59 by rortiz           ###   ########.fr       */
+/*   Updated: 2026/03/19 08:59:26 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Copies n bytes from src memory and pastes it into 
+ * dest memory.
+ * @param {void*} dest: Pointer to the destination memory area
+ * @param {const void*} src: Pointer to the source memory area
+ * @param {unsigned int} n: Number of bytes to copy
+ * @return {void*} pointer to dest
+ */
 void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 {
 	unsigned char		*ptr_dest;

@@ -6,12 +6,18 @@
 /*   By: rortiz <rortiz@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 08:49:52 by rortiz            #+#    #+#             */
-/*   Updated: 2026/03/13 09:37:20 by rortiz           ###   ########.fr       */
+/*   Updated: 2026/03/19 09:04:34 by rortiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Compares two strings and returns the result of the comparison
+ * @param {const char*} s1: First string in comparison
+ * @param {const char*} s2: Second string in comparison
+ * @return {int} Result of the comparison 
+ */
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	unsigned char	*s11;
